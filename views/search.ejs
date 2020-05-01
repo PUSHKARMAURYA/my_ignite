@@ -1,0 +1,168 @@
+
+
+
+
+<html>
+	<head>
+		
+		
+		
+		
+		
+		<title>home</title>
+	 
+         <link href="https://fonts.googleapis.com/css?family=Bentham&display=swap" rel="stylesheet">
+		<style>
+			
+			body {
+  background-color: #000;
+}
+			
+			.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+			
+			.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position:bottom;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 8s linear infinite; 
+}
+	
+			
+		
+.slideshow li:nth-child(1) { 
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/17/13/33/classified-2651347_1280.jpg);
+  animation-delay: 0s; 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/17/13/33/business-2651346_1280.jpg);
+  animation-delay: 4s; 
+}
+
+			
+		
+			
+			
+			@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  25% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    opacity: 1
+  }
+  75% {
+    opacity: 0
+  }
+}
+			
+			/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+			
+			.center{
+				
+				 z-index: 1;
+				position:relative;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 320px;
+    color:ivory;
+    font-weight: 700;
+}
+.buttontext{
+       font-size: 32px;
+
+}
+.btn{
+    color: black;
+    background: ivory;
+ 
+    
+}
+
+.tagline{
+
+font-family: "bentham";
+}
+			
+			
+			
+			
+		</style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+	</head>
+	
+	<body>
+		
+
+		
+		
+
+       
+       <div class ="center" style="align-content:center">
+          
+           <div class="heading" style="color:red">
+       <i class="fas fa-rss-square"></i>
+               24/7 WORLD NEWS
+               
+           </div>
+		
+  <div style="width: 30%; margin: 20px auto;">
+            <form action="/results" method="get">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="search" placeholder="Topic ? Eg - Corona" required style="height:80px;width:500px;font-size:50px;">
+                </div>
+                
+                
+                <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-block"  style="height:80px;width:500px;font-size:40px;">Submit!</button>
+                </div>
+            </form>
+            <a href="/posts">Go Back</a>
+			
+			<!--add search by user -->
+        </div>		   
+		   
+	
+		</div>
+		
+		  <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+		
+		
+		
+	</body>
+	
+</html>
+
+
+

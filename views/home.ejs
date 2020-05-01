@@ -1,0 +1,256 @@
+
+<html>
+	<head>
+		<!-- PushAlert -->
+       <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "838b7694-f8c8-446d-b090-f539c5066c16",
+    });
+  });
+</script>
+		
+		
+		<title>home</title>
+	
+         <link href="https://fonts.googleapis.com/css?family=Bentham&display=swap" rel="stylesheet">
+		<style>
+			
+			body {
+  background-color: #000;
+}
+			
+			.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+			
+			.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 8.5s linear infinite; 
+}
+	
+			
+			.slideshow li:nth-child(1) { 
+				background-position:bottom;
+  background-image: url(https://cdn.pixabay.com/photo/2017/12/26/19/30/storm-3041241_1280.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://cdn.pixabay.com/photo/2020/02/19/11/01/city-4861938_1280.jpg);
+  animation-delay: 1.5s; 
+}
+
+.slideshow li:nth-child(3) { 
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/06/09/10/dark-2590544_1280.jpg);
+  animation-delay: 4.5s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://cdn.pixabay.com/photo/2013/05/12/18/55/balance-110850_1280.jpg);
+	background-position:right;
+  animation-delay: 6.5s; 
+}
+			
+		
+			
+			
+			@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+			
+			/* Older browser support - .no-cssanimation8s class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+			
+			.center{
+				
+				 z-index: 1;
+				position:relative;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 280px;
+    color:ivory;
+    font-weight: 700;
+}
+.buttontext{
+       font-size: 32px;
+
+}
+.btn{
+    color: black;
+    background: ivory;
+ 
+    
+}
+
+.tagline{
+
+font-family: "bentham";
+}
+			
+		html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  margin-top:100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}	
+			
+			
+		</style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+	</head>
+	
+	<body>
+		
+
+		
+		
+
+       
+       <div class ="center">
+           
+           <div class="heading">
+              <i class="fab fa-accusoft"></i>
+               MyIGNITE
+               
+           </div>
+           <div class="tagline " style="color: ivory; font-weight: 900;">
+              Learn Anything and Everything .
+               
+           </div>
+           
+      	<div class="wrap">
+			<a href="/posts">
+				<button class="button">Explore Posts</button></a>
+</div>
+	
+           
+       </div>
+
+		
+		  <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+ 
+    </ul>
+
+		
+		
+	</body>
+	
+</html>
+

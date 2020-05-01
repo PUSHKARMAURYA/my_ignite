@@ -1,0 +1,107 @@
+<html>
+	<head>
+		
+		<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Fredoka+One&family=Aladin900&family=Spicy+Rice&family=Merriweather:wght@900&family=Shrikhand&display=swap" rel="stylesheet">
+		
+		 <link  rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+		
+		
+		<style>
+		  body{
+                background-image: url(https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844230_1280.png);
+				background-size:cover;
+			  background-position:centers;
+				background-repeat:no-repeat;
+            }
+    
+    
+    
+    
+    </style> 
+		
+		 <script src="https://kit.fontawesome.com/b7cf8899e7.js" crossorigin="anonymous"></script> 
+         <link href="https://fonts.googleapis.com/css?family=Bentham&display=swap" rel="stylesheet">
+		<title>newPost</title>
+								
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+	
+        
+	</head>
+	<body>
+		
+		<nav class="navbar fixed-top" style="background:black;color:ivory;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/" style="color:ivory;font-size:30px;padding-left:50px;"><i class="fab fa-accusoft"></i>MyIGNITE</a>
+				    </div>
+            <div class="" >
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(u==null) {%>
+				    <li style="color:ivory;font-size:20px;"><a href="/login" style="color:ivory;font-size:25px;margin-right:20px;"><i class="fa fa-sign-in-alt"></i>   Login</a></li>
+                        <li style="color:ivory;font-size:20px;"><a href="/register" style="color:ivory;font-size:25px;margin-right:20px;"><i class="fa fa-user-plus"></i>  Sign Up</a></li>
+          <% }else{%>
+                        <li style="color:ivory;font-size:20px;"><a href="#" style="color:ivory;font-size:20px;"><i class="fas fa-user-check"></i>    <%= u %></a></li>
+                        <li style="color:ivory;font-size:20px;"><a href="/logout" style="color:ivory;font-size:20px;"><i class="fas fa-sign-out-alt"></i>   Logout</a></li>
+<%}%>
+        
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+		
+		
+		
+	<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+        <h1 style="text-align: center;color:ivory;font-family: 'Shrikhand', cursive;"> <i class="fas fa-user-check"></i>   <%= u %></h1>
+		
+		
+			
+		
+	<% items.forEach(function(item){ %>	
+<div class="ui main text container ">
+    <div class="ui huge header" style="color:ivory;">Update Post</div>
+    <form class="ui form" action="/update/<%=item._id%>" method="POST" enctype="multipart/form-data">
+        <div class="field" style="font-size:28px;">
+            <label  style="color:ivory">Title</label>
+            <input type="text" name="name" value="<%=item.name%>">
+        </div>
+       
+        <div class="field" style="font-size:28px;">
+            <label  style="color:ivory" >Post Content</label>
+			<textarea  name="message" ><%= item.desc%></textarea>
+        </div>
+      
+		<input type="file" name="myFiles"  multiple="multiple">
+		
+		   <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-block"  style="height:80px;width:670px;font-size:40px;">Submit!</button>
+                </div>
+		
+		
+    </form>
+</div>
+		
+		
+	<% })%>	
+		
+		
+	
+	
+
+
+
+		
+	</body>
+	
+</html>
+
+
+
+
